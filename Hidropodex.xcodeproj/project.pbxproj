@@ -11,6 +11,9 @@
 		01092E0A26C66B0B008CDB22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01092E0926C66B0B008CDB22 /* ContentView.swift */; };
 		01092E0C26C66B0E008CDB22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01092E0B26C66B0E008CDB22 /* Assets.xcassets */; };
 		01092E0F26C66B0E008CDB22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01092E0E26C66B0E008CDB22 /* Preview Assets.xcassets */; };
+		0125B81126C907B300A49A8A /* CardMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125B81026C907B300A49A8A /* CardMenuView.swift */; };
+		0125B81326C91B7500A49A8A /* DetailPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125B81226C91B7500A49A8A /* DetailPlantView.swift */; };
+		0125B81526C9295200A49A8A /* MiniCardMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125B81426C9295200A49A8A /* MiniCardMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		01092E0B26C66B0E008CDB22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01092E0E26C66B0E008CDB22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		01092E1026C66B0E008CDB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0125B81026C907B300A49A8A /* CardMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMenuView.swift; sourceTree = "<group>"; };
+		0125B81226C91B7500A49A8A /* DetailPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlantView.swift; sourceTree = "<group>"; };
+		0125B81426C9295200A49A8A /* MiniCardMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 				01092E0B26C66B0E008CDB22 /* Assets.xcassets */,
 				01092E1026C66B0E008CDB22 /* Info.plist */,
 				01092E0D26C66B0E008CDB22 /* Preview Content */,
+				0125B81026C907B300A49A8A /* CardMenuView.swift */,
+				0125B81226C91B7500A49A8A /* DetailPlantView.swift */,
+				0125B81426C9295200A49A8A /* MiniCardMenu.swift */,
 			);
 			path = Hidropodex;
 			sourceTree = "<group>";
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0125B81526C9295200A49A8A /* MiniCardMenu.swift in Sources */,
 				01092E0A26C66B0B008CDB22 /* ContentView.swift in Sources */,
+				0125B81326C91B7500A49A8A /* DetailPlantView.swift in Sources */,
 				01092E0826C66B0B008CDB22 /* HidropodexApp.swift in Sources */,
+				0125B81126C907B300A49A8A /* CardMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
