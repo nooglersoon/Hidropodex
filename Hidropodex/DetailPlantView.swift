@@ -12,13 +12,8 @@ import SwiftyJSON
 struct DetailPlantView: View {
     
     
-    @State private var parameters = [
-        
-        Parameters(namaParam: "Flowrate", realTimeValue: 0, rangeSetup: "7.5 - 8", satuanParam: "L/min", colorParam: .blue, image: "drop.fill"),
-        Parameters(namaParam: "Temp", realTimeValue: 0, rangeSetup: "24 - 28", satuanParam: "°C", colorParam: .yellow, image: "thermometer"),
-        Parameters(namaParam: "Disease", realTimeValue: 0, rangeSetup: "1", satuanParam: "Case(s)", colorParam: .green, image: "leaf.fill")
-        
-    ]
+    @StateObject var parameters = ParameterObject()
+    @StateObject var plantDisease = PlantDetectionModel()
     
     var body: some View {
         
@@ -98,9 +93,9 @@ struct DetailPlantView: View {
                 
                 HStack(spacing:20) {
                     
-                    MiniCardMenu(parameter: parameters[0])
-                    MiniCardMenu(parameter: parameters[1])
-                    MiniCardMenu(parameter: parameters[2])
+                    MiniCardMenu(parameter: parameters.parameters[0])
+                    MiniCardMenu(parameter: parameters.parameters[1])
+                    MiniCardMenu(parameter: parameters.parameters[2])
                     
                 }
                 .padding(.top, 20)
@@ -110,27 +105,21 @@ struct DetailPlantView: View {
                 
                 VStack(spacing: 20) {
                     
-                    Button(action: {
-                        print("")
-                    }, label: {
-                        
+                    NavigationLink( destination: ControllingView(parameters: parameters)){
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: UIScreen.main.bounds.width-50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             .foregroundColor(Color("yellowButton"))
                             .overlay(Text("Controlling").foregroundColor(Color("brownText")))
-                        
-                    })
+                    }
                     
-                    Button(action: {
-                        print("")
-                    }, label: {
-                        
+                    NavigationLink( destination: EmptyView()){
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: UIScreen.main.bounds.width-50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             .foregroundColor(Color("yellowButton"))
                             .overlay(Text("Analysis").foregroundColor(Color("brownText")))
-                        
-                    })
+                    }
+                    .disabled(true)
+                    .opacity(0.4)
                     
                 }
                 
@@ -162,8 +151,9 @@ struct DetailPlantView: View {
                     let humidity = makeFloat(array[1])
                     let flowRate = makeFloat(array[2])
                     
-                    parameters[0].realTimeValue = flowRate
-                    parameters[1].realTimeValue = temp
+                    parameters.parameters[0].realTimeValue = flowRate
+                    parameters.parameters[1].realTimeValue = temp
+                    parameters.parameters[2].realTimeValue = humidity
                     
                     
                     
@@ -190,4 +180,16 @@ struct DetailPlantView_Previews: PreviewProvider {
     static var previews: some View {
         DetailPlantView()
     }
+}
+
+class ParameterObject: ObservableObject {
+    
+    @Published var parameters = [
+        
+        Parameters(namaParam: "Water Flowrate", realTimeValue: 0, rangeSetup: "7.5 - 8", satuanParam: "L/min", colorParam: .blue, image: "drop.fill"),
+        Parameters(namaParam: "Temp", realTimeValue: 0, rangeSetup: "24 - 28", satuanParam: "°C", colorParam: .yellow, image: "thermometer"),
+        Parameters(namaParam: "Humidity", realTimeValue: 0, rangeSetup: "1", satuanParam: "%", colorParam: .green, image: "cloud.sun.fill")
+        
+    ]
+    
 }

@@ -14,6 +14,10 @@
 		0125B81126C907B300A49A8A /* CardMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125B81026C907B300A49A8A /* CardMenuView.swift */; };
 		0125B81326C91B7500A49A8A /* DetailPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125B81226C91B7500A49A8A /* DetailPlantView.swift */; };
 		0125B81526C9295200A49A8A /* MiniCardMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125B81426C9295200A49A8A /* MiniCardMenu.swift */; };
+		0173F44B26CAB988003E36AD /* Tomato Diseases.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0173F44A26CAB988003E36AD /* Tomato Diseases.mlmodel */; };
+		01C7679126CA991100D173A8 /* ControllingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C7679026CA991100D173A8 /* ControllingView.swift */; };
+		01C7679326CA994800D173A8 /* coreml_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 01C7679226CA994800D173A8 /* coreml_model.mlmodel */; };
+		01C7679526CAA03700D173A8 /* DetailAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C7679426CAA03700D173A8 /* DetailAnalysisView.swift */; };
 		01FE587926C95EEF008FFCB7 /* HidrophonicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE587826C95EEF008FFCB7 /* HidrophonicModel.swift */; };
 		01FE587C26C97623008FFCB7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 01FE587B26C97623008FFCB7 /* Alamofire */; };
 		01FE587F26C97BAB008FFCB7 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 01FE587E26C97BAB008FFCB7 /* SwiftyJSON */; };
@@ -29,6 +33,10 @@
 		0125B81026C907B300A49A8A /* CardMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMenuView.swift; sourceTree = "<group>"; };
 		0125B81226C91B7500A49A8A /* DetailPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlantView.swift; sourceTree = "<group>"; };
 		0125B81426C9295200A49A8A /* MiniCardMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardMenu.swift; sourceTree = "<group>"; };
+		0173F44A26CAB988003E36AD /* Tomato Diseases.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Tomato Diseases.mlmodel"; sourceTree = "<group>"; };
+		01C7679026CA991100D173A8 /* ControllingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllingView.swift; sourceTree = "<group>"; };
+		01C7679226CA994800D173A8 /* coreml_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = coreml_model.mlmodel; sourceTree = "<group>"; };
+		01C7679426CAA03700D173A8 /* DetailAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnalysisView.swift; sourceTree = "<group>"; };
 		01FE587826C95EEF008FFCB7 /* HidrophonicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HidrophonicModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +81,10 @@
 				0125B81226C91B7500A49A8A /* DetailPlantView.swift */,
 				0125B81426C9295200A49A8A /* MiniCardMenu.swift */,
 				01FE587826C95EEF008FFCB7 /* HidrophonicModel.swift */,
+				01C7679026CA991100D173A8 /* ControllingView.swift */,
+				0173F44A26CAB988003E36AD /* Tomato Diseases.mlmodel */,
+				01C7679226CA994800D173A8 /* coreml_model.mlmodel */,
+				01C7679426CAA03700D173A8 /* DetailAnalysisView.swift */,
 			);
 			path = Hidropodex;
 			sourceTree = "<group>";
@@ -162,11 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0173F44B26CAB988003E36AD /* Tomato Diseases.mlmodel in Sources */,
 				0125B81526C9295200A49A8A /* MiniCardMenu.swift in Sources */,
 				01092E0A26C66B0B008CDB22 /* ContentView.swift in Sources */,
 				0125B81326C91B7500A49A8A /* DetailPlantView.swift in Sources */,
 				01FE587926C95EEF008FFCB7 /* HidrophonicModel.swift in Sources */,
+				01C7679526CAA03700D173A8 /* DetailAnalysisView.swift in Sources */,
+				01C7679126CA991100D173A8 /* ControllingView.swift in Sources */,
 				01092E0826C66B0B008CDB22 /* HidropodexApp.swift in Sources */,
+				01C7679326CA994800D173A8 /* coreml_model.mlmodel in Sources */,
 				0125B81126C907B300A49A8A /* CardMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
