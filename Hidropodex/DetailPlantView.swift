@@ -6,8 +6,20 @@
 //
 
 import SwiftUI
+import Alamofire
+import SwiftyJSON
 
 struct DetailPlantView: View {
+    
+    
+    @State private var parameters = [
+        
+        Parameters(namaParam: "Flowrate", realTimeValue: 0, rangeSetup: "7.5 - 8", satuanParam: "L/min", colorParam: .blue, image: "drop.fill"),
+        Parameters(namaParam: "Temp", realTimeValue: 0, rangeSetup: "24 - 28", satuanParam: "°C", colorParam: .yellow, image: "thermometer"),
+        Parameters(namaParam: "Disease", realTimeValue: 0, rangeSetup: "1", satuanParam: "Case(s)", colorParam: .green, image: "leaf.fill")
+        
+    ]
+    
     var body: some View {
         
         ZStack {
@@ -23,7 +35,7 @@ struct DetailPlantView: View {
                         .bold()
                         .foregroundColor(.white)
                         .font(.largeTitle)
-                        
+                    
                     
                     ZStack {
                         
@@ -86,10 +98,9 @@ struct DetailPlantView: View {
                 
                 HStack(spacing:20) {
                     
-                    MiniCardMenu()
-                    MiniCardMenu()
-                    MiniCardMenu()
-
+                    MiniCardMenu(parameter: parameters[0])
+                    MiniCardMenu(parameter: parameters[1])
+                    MiniCardMenu(parameter: parameters[2])
                     
                 }
                 .padding(.top, 20)
@@ -127,6 +138,51 @@ struct DetailPlantView: View {
             .frame(height: UIScreen.main.bounds.height-150)
             
         }
+        .onAppear{
+            
+            let headers: HTTPHeaders = [
+                "X-M2m-Origin": "6cd5e5cc78bbed06:faefeda74389bcb0",
+                "Content-Type": "application/json",
+                "Accept" : "application/json"
+            ]
+            
+            AF.request("https://platform.antares.id:8443/~/antares-cse/antares-id/smart-plant/sensor/la", headers: headers).responseJSON { response in
+                //Parse or print your response.
+                
+                switch response.result {
+                case .success(let value):
+                    
+                    print("succes!")
+                    
+                    let antaresJSON: JSON = JSON(value)
+                    let data = antaresJSON["m2m:cin"]["con"].stringValue.replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: "")
+                    
+                    let array = data.components(separatedBy: ",")
+                    let temp = makeFloat(array[0])
+                    let humidity = makeFloat(array[1])
+                    let flowRate = makeFloat(array[2])
+                    
+                    parameters[0].realTimeValue = flowRate
+                    parameters[1].realTimeValue = temp
+                    
+                    
+                    
+                case .failure(let error):
+                    print(error)
+                    print(response.response?.statusCode)
+                }
+                
+                
+            }
+        }
+    }
+    
+    func makeFloat(_ str: String) -> Float {
+        
+        let weightt = str.components(separatedBy: CharacterSet.init(charactersIn: "0123456789.").inverted).joined(separator: "")
+        
+        return Float(weightt) ?? 0
+        
     }
 }
 

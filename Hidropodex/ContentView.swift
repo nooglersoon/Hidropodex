@@ -76,7 +76,7 @@ struct ContentView: View {
                         )
                     
                     Rectangle()
-                        .frame(width: geo.size.width, height: geo.size.height-192, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .frame(width: geo.size.width, height: UIScreen.main.bounds.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .foregroundColor(Color("lightGreen"))
                         .overlay(
                         
