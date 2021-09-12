@@ -30,6 +30,6 @@ SMKDEX Indigo Hackaton Team.
 
 - [Gilang - iOS Developer](https://github.com/mgilangns)
 - [Aji - iOS Developer](https://github.com/nooglersoon)
-- [Fatkur - IoT Engineer]()
-- [Sandi - UI/UX Designer]()
-- [Rima - UI/UX Designer]()
+- [Fatkur - IoT Engineer](https://github.com/Fatkurrochman)
+- [Sandi - UI/UX Designer](https://github.com/msandilaga)
+- [Rima - UI/UX Designer](https://github.com/RimaCholilah)
