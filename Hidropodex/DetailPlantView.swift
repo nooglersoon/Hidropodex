@@ -130,7 +130,7 @@ struct DetailPlantView: View {
         .onAppear{
             
             let headers: HTTPHeaders = [
-                "X-M2m-Origin": "6cd5e5cc78bbed06:faefeda74389bcb0",
+                "X-M2m-Origin": "",
                 "Content-Type": "application/json",
                 "Accept" : "application/json"
             ]
