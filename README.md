@@ -6,10 +6,11 @@ This application is also equipped with an object detection feature using CoreML 
 
 ## Previews
 
-| View       | View        |
+| Home Screen       | IoT Urban Farming Dashboard        |
 | :-------------: |:-------------:|
-|     |  |
-
+|  <img src="https://user-images.githubusercontent.com/63455298/133910973-db23e280-2f29-4a23-b8c4-14eb17d7a74c.PNG" width=30%>   | <img src="https://user-images.githubusercontent.com/63455298/133910968-2346be35-74b6-48a8-b99c-f2cc2b28afa6.PNG" width=30%> |
+| Plant Disease Detection |
+|<img src="https://user-images.githubusercontent.com/63455298/133910999-691b68d6-1922-4184-98c1-87f37568d891.mov" width=30%>|
 
 ## Frameworks / Technology
 
